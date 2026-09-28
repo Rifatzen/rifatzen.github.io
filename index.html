@@ -3,975 +3,559 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Md. Rifat Rahman</title>
 
-  <meta name="description" content="Md. Rifat Rahman — Lecturer, Department of Computer Science and Engineering, BRAC University. Graph theory, combinatorics and systems programming.">
+  <meta name="description" content="Md. Rifat Rahman — Lecturer, Department of Computer Science and Engineering, BRAC University. Graph theory and combinatorics.">
 
-  <!-- open graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Md. Rifat Rahman">
-  <meta property="og:description" content="Lecturer, Department of CSE, BRAC University. Graph theory, combinatorics and systems programming.">
+  <meta property="og:description" content="Lecturer, Department of CSE, BRAC University. Graph theory and combinatorics.">
   <meta property="og:url" content="https://rifatzen.github.io/">
-  <meta property="og:image" content="https://rifatzen.github.io/assets/images/my-avatar.png">
+
+  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="./assets/images/logo.ico">
 
   <!--
-    - favicon
+    - NOTE: the ?v=4 on the stylesheet and script below is a cache-buster.
+    - Browsers hold on to these files hard. If you edit style.css or
+    - script.js and the change does not show up, bump both to ?v=5.
   -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css?v=4">
 
-  <!--
-    - custom css link
-    - NOTE: the ?v=3 is a cache-buster. If you edit style.css and the change
-    - does not show up, bump it to ?v=4 and browsers will refetch the file.
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css?v=3">
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- fonts are self-hosted in assets/fonts and declared in style.css -->
+  <link rel="preload" href="./assets/fonts/newsreader-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
 <body>
 
-  <!--
-    - #MAIN
-  -->
+  <div class="wrap">
 
-  <main>
+    <!-- ============================================================ SIDEBAR -->
 
-    <!--
-      - #SIDEBAR
-    -->
+    <aside class="sidebar">
+     <div class="sidebar-inner">
 
-    <aside class="sidebar" data-sidebar>
+      <img class="portrait" src="./assets/images/my-avatar.png" alt="Md. Rifat Rahman" width="108" height="108">
 
-      <div class="sidebar-info">
+      <h1 class="name">Md. Rifat<br>Rahman</h1>
 
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Md. Rifat Rahman" width="80">
-        </figure>
+      <p class="role">Lecturer, Department of CSE<br>BRAC University</p>
 
-        <div class="info-content">
-          <h1 class="name" title="Md. Rifat Rahman">Md. Rifat Rahman</h1>
+      <ul class="contact-list">
 
-          <p class="title">Lecturer, CSE — BRAC University</p>
-        </div>
+        <li class="contact-row">
+          <span class="contact-key">Email</span>
+          <a class="contact-val" href="mailto:kousei1tachibana@gmail.com">kousei1tachibana@gmail.com</a>
+        </li>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+        <li class="contact-row">
+          <span class="contact-key">GitHub</span>
+          <a class="contact-val" href="https://github.com/Rifatzen" target="_blank" rel="noopener">Rifatzen</a>
+        </li>
 
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
+        <li class="contact-row">
+          <span class="contact-key">LinkedIn</span>
+          <a class="contact-val" href="https://www.linkedin.com/in/md-rifat-rahman-631296290/" target="_blank" rel="noopener">md-rifat-rahman</a>
+        </li>
 
-      </div>
+        <li class="contact-row">
+          <span class="contact-key">Location</span>
+          <address class="contact-val">Dhaka, Bangladesh</address>
+        </li>
 
-      <div class="sidebar-info_more">
+      </ul>
 
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:kousei1tachibana@gmail.com" class="contact-link">kousei1tachibana@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="logo-github"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">GitHub</p>
-
-              <a href="https://github.com/Rifatzen" class="contact-link" target="_blank" rel="noopener">github.com/Rifatzen</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">LinkedIn</p>
-
-              <a href="https://www.linkedin.com/in/md-rifat-rahman-631296290/" class="contact-link" target="_blank" rel="noopener">Md. Rifat Rahman</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Dhaka, Bangladesh</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://github.com/Rifatzen" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/md-rifat-rahman-631296290/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="mailto:kousei1tachibana@gmail.com" class="social-link" aria-label="Email">
-              <ion-icon name="mail-outline"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
+     </div>
     </aside>
 
 
+    <!-- ============================================================ CONTENT -->
 
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
+    <main>
 
       <!--
-        - #NAVBAR
-        - NOTE: button text (lowercased) must equal the data-page value of the
-        - article in the same position below. Keep both lists in the same order.
+        - NAV — button text (lowercased) must equal the data-page value of
+        - the matching section below.
       -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Projects</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Awards</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><button class="nav-link active" data-nav-link>About</button></li>
+          <li><button class="nav-link" data-nav-link>Projects</button></li>
+          <li><button class="nav-link" data-nav-link>Awards</button></li>
+          <li><button class="nav-link" data-nav-link>Contact</button></li>
         </ul>
-
       </nav>
 
 
+      <!-- ---------------------------------------------------------- ABOUT -->
 
+      <section class="page active" data-page="about">
 
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
+        <div class="block lede">
           <p>
-            I'm Rifat, a Lecturer in the Department of Computer Science and Engineering at
-            <a href="https://cse.sds.bracu.ac.bd/" target="_blank" rel="noopener">BRAC University</a>, Dhaka.
-            I graduated from the Department of CSE at
-            <a href="https://cse.buet.ac.bd" target="_blank" rel="noopener">BUET</a> in 2025 with a CGPA of 3.90/4.00.
+            I'm a Lecturer in the Department of Computer Science and Engineering at
+            <a href="https://cse.sds.bracu.ac.bd/" target="_blank" rel="noopener">BRAC University</a>.
+            I graduated from <a href="https://cse.buet.ac.bd" target="_blank" rel="noopener">BUET</a>
+            in 2025 with a CGPA of 3.90/4.00.
           </p>
 
           <p>
-            My undergraduate thesis, <em>New Results on Unique Neighbourhood Networks</em>, is on a graph class in
-            which no two vertices share the same neighbourhood. I derived a new formula for counting Unique
-            Neighbourhood Networks on a given number of vertices, and used that formula to enumerate them.
-            Graph theory and combinatorics are where most of my interest sits.
+            My interest is in graph theory and combinatorics. My undergraduate thesis derived a new formula
+            for counting <em>Unique Neighbourhood Networks</em> — graphs in which no two vertices share a
+            neighbourhood — and used it to enumerate them.
           </p>
-
-          <p>
-            Outside of that I build things end to end — a conference management system in Svelte and Supabase,
-            a C compiler with Flex and Bison, a ray tracer in C++, a neural network from scratch in Python,
-            and a handful of hardware projects from logic gates up to a working MIPS simulation.
-            I also competed in mathematics olympiads for most of a decade.
-          </p>
-        </section>
+        </div>
 
 
-        <!--
-          - service
-        -->
+        <div class="block">
+          <h2 class="block-title">Interests</h2>
 
-        <section class="service">
+          <div class="interests">
 
-          <h3 class="h3 service-title">What I work on</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="graph theory icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Graph theory &amp; combinatorics</h4>
-
-                <p class="service-item-text">
-                  Counting and enumerating structured graph classes. Unique Neighbourhood Networks are my
-                  main line of work.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg" alt="teaching icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Teaching</h4>
-
-                <p class="service-item-text">
-                  Lecturer in the Department of CSE at BRAC University since June 2025.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
-                <p class="service-item-text">
-                  Full-stack applications with Svelte, Node.js and Supabase.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="systems icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Systems &amp; hardware</h4>
-
-                <p class="service-item-text">
-                  Compilers, ray tracing, and digital logic — from a 4-bit ALU built out of gates to a
-                  MIPS simulation.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="briefcase-outline"></ion-icon>
+            <div>
+              <p class="interest-term">Graph theory &amp; combinatorics</p>
+              <p class="interest-desc">Counting and enumerating structured graph classes.</p>
             </div>
 
-            <h3 class="h3">Work Experience</h3>
+            <div>
+              <p class="interest-term">Teaching</p>
+              <p class="interest-desc">Department of CSE, BRAC University.</p>
+            </div>
+
+            <div>
+              <p class="interest-term">Web development</p>
+              <p class="interest-desc">Full-stack work with Svelte, Node.js and Supabase.</p>
+            </div>
+
+            <div>
+              <p class="interest-term">Systems &amp; hardware</p>
+              <p class="interest-desc">Compilers, ray tracing and digital logic.</p>
+            </div>
+
           </div>
+        </div>
 
-          <ol class="cv-list">
 
-            <li class="cv-item">
-              <div class="cv-body">
-                <h4 class="cv-title">Lecturer</h4>
-                <p class="cv-org">
+        <div class="block">
+          <h2 class="block-title">Work Experience</h2>
+
+          <ol class="entries">
+
+            <li class="entry">
+              <div class="entry-body">
+                <h3 class="entry-title">Lecturer</h3>
+                <p class="entry-org">
                   Department of Computer Science and Engineering,
                   <a href="https://cse.sds.bracu.ac.bd/" target="_blank" rel="noopener">BRAC University</a>
                 </p>
-                <p class="cv-meta">Dhaka, Bangladesh</p>
+                <p class="entry-meta">Dhaka, Bangladesh</p>
               </div>
-              <div class="cv-date">June 2025 — Present</div>
+              <p class="entry-date">June 2025 — Present</p>
             </li>
 
           </ol>
+        </div>
 
-        </section>
 
+        <div class="block">
+          <h2 class="block-title">Thesis</h2>
 
-        <section class="timeline">
+          <ol class="entries">
 
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="document-text-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Thesis</h3>
-          </div>
-
-          <ol class="cv-list">
-
-            <li class="cv-item">
-              <div class="cv-body">
-                <h4 class="cv-title">New Results on Unique Neighbourhood Networks</h4>
-                <p class="cv-org">
+            <li class="entry">
+              <div class="entry-body">
+                <h3 class="entry-title">New Results on Unique Neighbourhood Networks</h3>
+                <p class="entry-org">
                   Undergraduate thesis,
                   <a href="https://cse.buet.ac.bd" target="_blank" rel="noopener">Department of CSE, BUET</a>
                 </p>
-                <p class="cv-note">
+                <p class="entry-note">
                   Unique Neighbourhood Networks are a special graph class in which no two vertices share the
                   same neighbourhood. I derived a completely new formula to count the number of Unique
                   Neighbourhood Networks (UNNs) on a given number of vertices, and used that formula to
                   enumerate all of them.
                 </p>
               </div>
-              <div class="cv-date">2025</div>
+              <p class="entry-date">2025</p>
             </li>
 
           </ol>
+        </div>
 
-        </section>
 
+        <div class="block">
+          <h2 class="block-title">Education</h2>
 
-        <section class="timeline">
+          <ol class="entries">
 
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="cv-list">
-
-            <li class="cv-item">
-              <div class="cv-body">
-                <h4 class="cv-title">B.Sc. in Computer Science and Engineering</h4>
-                <p class="cv-org">
+            <li class="entry">
+              <div class="entry-body">
+                <h3 class="entry-title">B.Sc. in Computer Science and Engineering</h3>
+                <p class="entry-org">
                   <a href="https://www.buet.ac.bd" target="_blank" rel="noopener">Bangladesh University of Engineering and Technology</a>
                 </p>
-                <p class="cv-meta">Dhaka, Bangladesh &nbsp;·&nbsp; GPA: 3.90 / 4.00</p>
+                <p class="entry-meta">Dhaka, Bangladesh &nbsp;·&nbsp; GPA 3.90 / 4.00</p>
               </div>
-              <div class="cv-date">Feb 2020 — Mar 2025</div>
+              <p class="entry-date">Feb 2020 — Mar 2025</p>
             </li>
 
-            <li class="cv-item">
-              <div class="cv-body">
-                <h4 class="cv-title">H.S.C in Science</h4>
-                <p class="cv-org">Notre Dame College</p>
-                <p class="cv-meta">Dhaka, Bangladesh &nbsp;·&nbsp; GPA: 5.00 / 5.00</p>
+            <li class="entry">
+              <div class="entry-body">
+                <h3 class="entry-title">H.S.C in Science</h3>
+                <p class="entry-org">Notre Dame College</p>
+                <p class="entry-meta">Dhaka, Bangladesh &nbsp;·&nbsp; GPA 5.00 / 5.00</p>
               </div>
-              <div class="cv-date">Jul 2017 — Jul 2019</div>
+              <p class="entry-date">Jul 2017 — Jul 2019</p>
             </li>
 
-            <li class="cv-item">
-              <div class="cv-body">
-                <h4 class="cv-title">S.S.C in Science</h4>
-                <p class="cv-org">Bogura Zilla School</p>
-                <p class="cv-meta">Bogura, Bangladesh &nbsp;·&nbsp; GPA: 5.00 / 5.00</p>
+            <li class="entry">
+              <div class="entry-body">
+                <h3 class="entry-title">S.S.C in Science</h3>
+                <p class="entry-org">Bogura Zilla School</p>
+                <p class="entry-meta">Bogura, Bangladesh &nbsp;·&nbsp; GPA 5.00 / 5.00</p>
               </div>
-              <div class="cv-date">Jan 2009 — Mar 2017</div>
+              <p class="entry-date">Jan 2009 — Mar 2017</p>
             </li>
 
           </ol>
-
-        </section>
-
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">Technical Skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-              <h5 class="h5 skills-item-title">Languages</h5>
-              <ul class="tag-list">
-                <li class="tag">C</li>
-                <li class="tag">C++</li>
-                <li class="tag">Java</li>
-                <li class="tag">Python</li>
-                <li class="tag">JavaScript</li>
-              </ul>
-            </li>
-
-            <li class="skills-item">
-              <h5 class="h5 skills-item-title">Web Development</h5>
-              <ul class="tag-list">
-                <li class="tag">HTML</li>
-                <li class="tag">CSS</li>
-                <li class="tag">Node.js</li>
-                <li class="tag">Svelte</li>
-              </ul>
-            </li>
-
-            <li class="skills-item">
-              <h5 class="h5 skills-item-title">Database</h5>
-              <ul class="tag-list">
-                <li class="tag">Supabase</li>
-              </ul>
-            </li>
-
-            <li class="skills-item">
-              <h5 class="h5 skills-item-title">Tools</h5>
-              <ul class="tag-list">
-                <li class="tag">Flex</li>
-                <li class="tag">Bison</li>
-                <li class="tag">Assembly</li>
-                <li class="tag">Logisim</li>
-                <li class="tag">ESP32</li>
-              </ul>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
+        </div>
 
 
+        <div class="block">
+          <h2 class="block-title">Technical Skills</h2>
 
-
-
-      <!--
-        - #PROJECTS
-        - NOTE: filter button text (lowercased) must equal a data-category value.
-        - The desktop buttons and the mobile dropdown items must match each other.
-      -->
-
-      <article class="portfolio" data-page="projects">
-
-        <header>
-          <h2 class="h2 article-title">Projects</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Machine learning</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Graphics</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Systems</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Hardware</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Machine learning</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Graphics</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Systems</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Hardware</button>
-              </li>
-
+          <div class="skill-row">
+            <p class="skill-key">Languages</p>
+            <ul class="tags">
+              <li class="tag">C</li>
+              <li class="tag">C++</li>
+              <li class="tag">Java</li>
+              <li class="tag">Python</li>
+              <li class="tag">JavaScript</li>
             </ul>
-
           </div>
 
-          <ul class="project-rows content-card">
+          <div class="skill-row">
+            <p class="skill-key">Web development</p>
+            <ul class="tags">
+              <li class="tag">HTML</li>
+              <li class="tag">CSS</li>
+              <li class="tag">Node.js</li>
+              <li class="tag">Svelte</li>
+            </ul>
+          </div>
 
-            <li class="project-row  active" data-filter-item data-category="web">
+          <div class="skill-row">
+            <p class="skill-key">Database</p>
+            <ul class="tags">
+              <li class="tag">Supabase</li>
+            </ul>
+          </div>
 
-              <div class="project-row-head">
-                <h3 class="project-row-title">Conference Management System</h3>
+          <div class="skill-row">
+            <p class="skill-key">Tools</p>
+            <ul class="tags">
+              <li class="tag">Flex</li>
+              <li class="tag">Bison</li>
+              <li class="tag">Assembly</li>
+              <li class="tag">Logisim</li>
+              <li class="tag">ESP32</li>
+            </ul>
+          </div>
 
-                <a href="https://github.com/Rifatzen/Conference-Management-System-Backend" class="project-row-link" target="_blank" rel="noopener">
-                  <ion-icon name="logo-github"></ion-icon>
-                  <span>View on GitHub</span>
-                </a>
+        </div>
+
+      </section>
+
+
+      <!-- ------------------------------------------------------- PROJECTS -->
+      <!--
+        - Filter button text (lowercased) must equal a data-category value,
+        - or be "all".
+      -->
+
+      <section class="page" data-page="projects">
+
+        <h2 class="page-title">Projects</h2>
+
+        <div class="filters">
+          <button class="filter-btn active" data-filter-btn>All</button>
+          <button class="filter-btn" data-filter-btn>Web</button>
+          <button class="filter-btn" data-filter-btn>Machine learning</button>
+          <button class="filter-btn" data-filter-btn>Graphics</button>
+          <button class="filter-btn" data-filter-btn>Systems</button>
+          <button class="filter-btn" data-filter-btn>Hardware</button>
+        </div>
+
+        <ul>
+
+          <li class="project active" data-filter-item data-category="web">
+            <div class="project-head">
+              <h3 class="project-name">Conference Management System</h3>
+              <a class="project-link" href="https://github.com/Rifatzen/Conference-Management-System-Backend" target="_blank" rel="noopener">View on GitHub ↗</a>
+            </div>
+            <ul class="tags">
+              <li class="tag">Svelte</li>
+              <li class="tag">Node.js</li>
+              <li class="tag">Supabase</li>
+            </ul>
+            <p class="project-text">
+              A web-based application to manage conferences where people can submit their papers. The
+              organizers can assign papers to reviewers, and the reviewers can submit their reviews
+              anonymously.
+            </p>
+          </li>
+
+          <li class="project active" data-filter-item data-category="machine learning">
+            <div class="project-head">
+              <h3 class="project-name">Feedforward Neural Network from Scratch</h3>
+              <a class="project-link" href="https://github.com/Rifatzen/Neural-Network-from-Scratch" target="_blank" rel="noopener">View on GitHub ↗</a>
+            </div>
+            <ul class="tags">
+              <li class="tag">Python</li>
+              <li class="tag">NumPy</li>
+            </ul>
+            <p class="project-text">
+              Implemented a feedforward neural network from scratch using Python. I also implemented batch
+              normalization, gradient optimizers and dropout to enhance the performance.
+            </p>
+          </li>
+
+          <li class="project active" data-filter-item data-category="graphics">
+            <div class="project-head">
+              <h3 class="project-name">Ray Tracing</h3>
+              <a class="project-link" href="https://github.com/Rifatzen/ray_tracing" target="_blank" rel="noopener">View on GitHub ↗</a>
+            </div>
+            <ul class="tags">
+              <li class="tag">C++</li>
+              <li class="tag">OpenGL</li>
+            </ul>
+            <p class="project-text">
+              Implemented a ray tracing engine to generate realistic images by simulating light interactions
+              with objects in C++. Developed features such as reflection, refraction and shadows to enhance
+              visual accuracy.
+            </p>
+          </li>
+
+          <li class="project active" data-filter-item data-category="systems">
+            <div class="project-head">
+              <h3 class="project-name">Basic C Compiler</h3>
+              <a class="project-link" href="https://github.com/Rifatzen/CSE310" target="_blank" rel="noopener">View on GitHub ↗</a>
+            </div>
+            <ul class="tags">
+              <li class="tag">C++</li>
+              <li class="tag">Flex</li>
+              <li class="tag">Bison</li>
+              <li class="tag">Assembly</li>
+            </ul>
+            <p class="project-text">
+              Developed a C compiler from scratch, beginning with the implementation of a symbol table.
+              Designed and implemented a lexical analyzer for tokenizing input, followed by syntax and
+              semantic analysis using Flex and Bison. Generated assembly code as the final output, which was
+              executed on an emulator to evaluate the correctness of the compilation process.
+            </p>
+          </li>
+
+          <li class="project active" data-filter-item data-category="graphics">
+            <div class="project-head">
+              <h3 class="project-name">Pacman</h3>
+              <a class="project-link" href="https://github.com/Rifatzen/pacman" target="_blank" rel="noopener">View on GitHub ↗</a>
+            </div>
+            <ul class="tags">
+              <li class="tag">C++</li>
+              <li class="tag">iGraphics</li>
+            </ul>
+            <p class="project-text">
+              An interactive game in iGraphics where you have to collect coins without getting caught.
+            </p>
+          </li>
+
+          <li class="project active" data-filter-item data-category="hardware">
+            <div class="project-head">
+              <h3 class="project-name">4-bit ALU Design</h3>
+              <span class="project-kind">Hardware</span>
+            </div>
+            <ul class="tags">
+              <li class="tag">Digital logic</li>
+            </ul>
+            <p class="project-text">
+              An arithmetic logic unit was built using only basic gates and adders. The adders were modified
+              in such a fashion that it can perform various instructions.
+            </p>
+          </li>
+
+          <li class="project active" data-filter-item data-category="hardware">
+            <div class="project-head">
+              <h3 class="project-name">4-bit MIPS Design</h3>
+              <span class="project-kind">Hardware</span>
+            </div>
+            <ul class="tags">
+              <li class="tag">Logisim</li>
+              <li class="tag">Digital logic</li>
+            </ul>
+            <p class="project-text">
+              A software simulation of MIPS was implemented in Logisim. The hardware implementation was also
+              done to carry out the instructions.
+            </p>
+          </li>
+
+          <li class="project active" data-filter-item data-category="hardware">
+            <div class="project-head">
+              <h3 class="project-name">Trespassing Alarm System</h3>
+              <span class="project-kind">Hardware</span>
+            </div>
+            <ul class="tags">
+              <li class="tag">ESP32</li>
+              <li class="tag">Embedded</li>
+            </ul>
+            <p class="project-text">
+              An alarm system that can detect trespassing in multiple ways. ESP32 was used as a
+              microcontroller to design the system.
+            </p>
+          </li>
+
+        </ul>
+
+      </section>
+
+
+      <!-- --------------------------------------------------------- AWARDS -->
+
+      <section class="page" data-page="awards">
+
+        <h2 class="page-title">Awards</h2>
+
+        <div class="block">
+          <h3 class="block-title">Competitions</h3>
+
+          <ol class="entries">
+
+            <li class="entry">
+              <div class="entry-body">
+                <h4 class="entry-title">Undergraduate Math Olympiad</h4>
+                <p class="entry-org">8th place, Dhaka South region</p>
               </div>
-
-              <ul class="tag-list">
-                <li class="tag">Svelte</li>
-                <li class="tag">Node.js</li>
-                <li class="tag">Supabase</li>
-              </ul>
-
-              <p class="project-row-text">
-                A web-based application to manage conferences where people can submit their papers. The
-                organizers can assign papers to reviewers, and the reviewers can submit their reviews
-                anonymously.
-              </p>
-
+              <p class="entry-date">2025</p>
             </li>
 
-            <li class="project-row  active" data-filter-item data-category="machine learning">
-
-              <div class="project-row-head">
-                <h3 class="project-row-title">Feedforward Neural Network from Scratch</h3>
-
-                <a href="https://github.com/Rifatzen/Neural-Network-from-Scratch" class="project-row-link" target="_blank" rel="noopener">
-                  <ion-icon name="logo-github"></ion-icon>
-                  <span>View on GitHub</span>
-                </a>
+            <li class="entry">
+              <div class="entry-body">
+                <h4 class="entry-title">Regional Math Olympiad</h4>
+                <p class="entry-org">Champion in 2016, 2017 and 2018 &nbsp;·&nbsp; First runner-up in 2019</p>
               </div>
-
-              <ul class="tag-list">
-                <li class="tag">Python</li>
-                <li class="tag">NumPy</li>
-              </ul>
-
-              <p class="project-row-text">
-                Implemented a feedforward neural network from scratch using Python. I also implemented batch
-                normalization, gradient optimizers and dropout to enhance the performance.
-              </p>
-
+              <p class="entry-date">2016 — 2019</p>
             </li>
 
-            <li class="project-row  active" data-filter-item data-category="graphics">
-
-              <div class="project-row-head">
-                <h3 class="project-row-title">Ray Tracing</h3>
-
-                <a href="https://github.com/Rifatzen/ray_tracing" class="project-row-link" target="_blank" rel="noopener">
-                  <ion-icon name="logo-github"></ion-icon>
-                  <span>View on GitHub</span>
-                </a>
+            <li class="entry">
+              <div class="entry-body">
+                <h4 class="entry-title">National Math Olympiad</h4>
+                <p class="entry-org">Second runner-up</p>
               </div>
-
-              <ul class="tag-list">
-                <li class="tag">C++</li>
-                <li class="tag">OpenGL</li>
-              </ul>
-
-              <p class="project-row-text">
-                Implemented a ray tracing engine to generate realistic images by simulating light interactions
-                with objects in C++. Developed features such as reflection, refraction and shadows to enhance
-                visual accuracy.
-              </p>
-
+              <p class="entry-date">2019</p>
             </li>
 
-            <li class="project-row  active" data-filter-item data-category="systems">
-
-              <div class="project-row-head">
-                <h3 class="project-row-title">Basic C Compiler</h3>
-
-                <a href="https://github.com/Rifatzen/CSE310" class="project-row-link" target="_blank" rel="noopener">
-                  <ion-icon name="logo-github"></ion-icon>
-                  <span>View on GitHub</span>
-                </a>
+            <li class="entry">
+              <div class="entry-body">
+                <h4 class="entry-title">Regional Physics Olympiad</h4>
+                <p class="entry-org">Selected in 2016, 2018 and 2019</p>
               </div>
-
-              <ul class="tag-list">
-                <li class="tag">C++</li>
-                <li class="tag">Flex</li>
-                <li class="tag">Bison</li>
-                <li class="tag">Assembly</li>
-              </ul>
-
-              <p class="project-row-text">
-                Developed a C compiler from scratch, beginning with the implementation of a symbol table.
-                Designed and implemented a lexical analyzer for tokenizing input, followed by syntax and
-                semantic analysis using Flex and Bison. Generated assembly code as the final output, which was
-                executed on an emulator to evaluate the correctness of the compilation process.
-              </p>
-
+              <p class="entry-date">2016 — 2019</p>
             </li>
 
-            <li class="project-row  active" data-filter-item data-category="graphics">
-
-              <div class="project-row-head">
-                <h3 class="project-row-title">Pacman</h3>
-
-                <a href="https://github.com/Rifatzen/pacman" class="project-row-link" target="_blank" rel="noopener">
-                  <ion-icon name="logo-github"></ion-icon>
-                  <span>View on GitHub</span>
-                </a>
+            <li class="entry">
+              <div class="entry-body">
+                <h4 class="entry-title">Creative Talent Hunt</h4>
+                <p class="entry-org">National level participant</p>
               </div>
-
-              <ul class="tag-list">
-                <li class="tag">C++</li>
-                <li class="tag">iGraphics</li>
-              </ul>
-
-              <p class="project-row-text">
-                An interactive game in iGraphics where you have to collect coins without getting caught.
-              </p>
-
+              <p class="entry-date">2016</p>
             </li>
 
-            <li class="project-row  active" data-filter-item data-category="hardware">
+          </ol>
+        </div>
 
-              <div class="project-row-head">
-                <h3 class="project-row-title">4-bit ALU Design</h3>
 
-                <span class="project-row-note">
-                  <ion-icon name="hardware-chip-outline"></ion-icon>
-                  <span>Hardware project</span>
-                </span>
+        <div class="block">
+          <h3 class="block-title">Honors &amp; Awards</h3>
+
+          <ol class="entries">
+
+            <li class="entry">
+              <div class="entry-body">
+                <h4 class="entry-title">University Merit Award</h4>
+                <p class="entry-org">Perfect GPA in Level-4 Term-2</p>
               </div>
-
-              <ul class="tag-list">
-                <li class="tag">Digital logic</li>
-              </ul>
-
-              <p class="project-row-text">
-                An arithmetic logic unit was built using only basic gates and adders. The adders were modified
-                in such a fashion that it can perform various instructions.
-              </p>
-
+              <p class="entry-date">Mar 2025</p>
             </li>
 
-            <li class="project-row  active" data-filter-item data-category="hardware">
-
-              <div class="project-row-head">
-                <h3 class="project-row-title">4-bit MIPS Design</h3>
-
-                <span class="project-row-note">
-                  <ion-icon name="hardware-chip-outline"></ion-icon>
-                  <span>Hardware project</span>
-                </span>
+            <li class="entry">
+              <div class="entry-body">
+                <h4 class="entry-title">University Merit Award</h4>
+                <p class="entry-org">Perfect GPA in Level-4 Term-1</p>
               </div>
-
-              <ul class="tag-list">
-                <li class="tag">Logisim</li>
-                <li class="tag">Digital logic</li>
-              </ul>
-
-              <p class="project-row-text">
-                A software simulation of MIPS was implemented in Logisim. The hardware implementation was also
-                done to carry out the instructions.
-              </p>
-
+              <p class="entry-date">Jun 2024</p>
             </li>
 
-            <li class="project-row  active" data-filter-item data-category="hardware">
-
-              <div class="project-row-head">
-                <h3 class="project-row-title">Trespassing Alarm System</h3>
-
-                <span class="project-row-note">
-                  <ion-icon name="hardware-chip-outline"></ion-icon>
-                  <span>Hardware project</span>
-                </span>
+            <li class="entry">
+              <div class="entry-body">
+                <h4 class="entry-title">Dean's List</h4>
+                <p class="entry-org">Selected in the Dean's List in 1st, 2nd and 4th year</p>
               </div>
+              <p class="entry-date">2020 — 2025</p>
+            </li>
 
-              <ul class="tag-list">
-                <li class="tag">ESP32</li>
-                <li class="tag">Embedded</li>
-              </ul>
+          </ol>
+        </div>
 
-              <p class="project-row-text">
-                An alarm system that can detect trespassing in multiple ways. ESP32 was used as a
-                microcontroller to design the system.
-              </p>
+      </section>
 
+
+      <!-- -------------------------------------------------------- CONTACT -->
+
+      <section class="page" data-page="contact">
+
+        <h2 class="page-title">Contact</h2>
+
+        <div class="block lede">
+          <p>
+            The fastest way to reach me is email. I'm also on GitHub and LinkedIn.
+          </p>
+        </div>
+
+        <div class="block">
+          <ul class="contact-lines">
+
+            <li class="contact-line">
+              <span class="contact-key">Email</span>
+              <a href="mailto:kousei1tachibana@gmail.com">kousei1tachibana@gmail.com</a>
+            </li>
+
+            <li class="contact-line">
+              <span class="contact-key">GitHub</span>
+              <a href="https://github.com/Rifatzen" target="_blank" rel="noopener">github.com/Rifatzen</a>
+            </li>
+
+            <li class="contact-line">
+              <span class="contact-key">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/md-rifat-rahman-631296290/" target="_blank" rel="noopener">md-rifat-rahman</a>
+            </li>
+
+            <li class="contact-line">
+              <span class="contact-key">Location</span>
+              <address>Department of CSE, BRAC University<br>Dhaka, Bangladesh</address>
             </li>
 
           </ul>
+        </div>
 
-        </section>
+      </section>
 
-      </article>
+    </main>
 
+  </div>
 
-
-
-
-      <!--
-        - #AWARDS
-      -->
-
-      <article class="resume" data-page="awards">
-
-        <header>
-          <h2 class="h2 article-title">Awards</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="trophy-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Competitions</h3>
-          </div>
-
-          <ol class="cv-list">
-
-            <li class="cv-item">
-              <div class="cv-body">
-                <h4 class="cv-title">Undergraduate Math Olympiad</h4>
-                <p class="cv-org">8th place, Dhaka South region</p>
-              </div>
-              <div class="cv-date">2025</div>
-            </li>
-
-            <li class="cv-item">
-              <div class="cv-body">
-                <h4 class="cv-title">Regional Math Olympiad</h4>
-                <p class="cv-org">Champion in 2016, 2017 and 2018 &nbsp;·&nbsp; First runner-up in 2019</p>
-              </div>
-              <div class="cv-date">2016 — 2019</div>
-            </li>
-
-            <li class="cv-item">
-              <div class="cv-body">
-                <h4 class="cv-title">National Math Olympiad</h4>
-                <p class="cv-org">Second runner-up</p>
-              </div>
-              <div class="cv-date">2019</div>
-            </li>
-
-            <li class="cv-item">
-              <div class="cv-body">
-                <h4 class="cv-title">Regional Physics Olympiad</h4>
-                <p class="cv-org">Selected in 2016, 2018 and 2019</p>
-              </div>
-              <div class="cv-date">2016 — 2019</div>
-            </li>
-
-            <li class="cv-item">
-              <div class="cv-body">
-                <h4 class="cv-title">Creative Talent Hunt</h4>
-                <p class="cv-org">National level participant</p>
-              </div>
-              <div class="cv-date">2016</div>
-            </li>
-
-          </ol>
-
-        </section>
-
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="ribbon-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Honors &amp; Awards</h3>
-          </div>
-
-          <ol class="cv-list">
-
-            <li class="cv-item">
-              <div class="cv-body">
-                <h4 class="cv-title">University Merit Award</h4>
-                <p class="cv-org">Perfect GPA in Level-4 Term-2</p>
-              </div>
-              <div class="cv-date">Mar 2025</div>
-            </li>
-
-            <li class="cv-item">
-              <div class="cv-body">
-                <h4 class="cv-title">University Merit Award</h4>
-                <p class="cv-org">Perfect GPA in Level-4 Term-1</p>
-              </div>
-              <div class="cv-date">Jun 2024</div>
-            </li>
-
-            <li class="cv-item">
-              <div class="cv-body">
-                <h4 class="cv-title">Dean's List</h4>
-                <p class="cv-org">Selected in the Dean's List in 1st, 2nd and 4th year</p>
-              </div>
-              <div class="cv-date">2020 — 2025</div>
-            </li>
-
-          </ol>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.openstreetmap.org/export/embed.html?bbox=90.4150%2C23.7650%2C90.4350%2C23.7800&amp;layer=mapnik&amp;marker=23.7725%2C90.4250"
-              width="400" height="300" loading="lazy" title="Dhaka, Bangladesh"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Get in touch</h3>
-
-          <!--
-            - This form needs a backend: GitHub Pages is static and cannot send mail.
-            - Create a free form at https://formspree.io, then replace YOUR_FORM_ID below.
-            - Until you do, the form will not deliver anything.
-          -->
-          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
-        </section>
-
-      </article>
-
-    </div>
-
-  </main>
-
-
-
-
-
-
-  <!--
-    - custom js link
-    - NOTE: the ?v=3 is a cache-buster. Browsers hold on to the old script.js
-    - very aggressively; changing this number forces them to refetch it.
-    - If you edit script.js and the change does not show up, bump it to ?v=4.
-  -->
-  <script src="./assets/js/script.js?v=3"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="./assets/js/script.js?v=4"></script>
 
 </body>
 
