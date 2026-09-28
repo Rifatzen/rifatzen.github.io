@@ -1879,15 +1879,153 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+
 }
+
 
 /*-----------------------------------*\
   #CUSTOM ADDITIONS
 \*-----------------------------------*/
 
 /**
- * skill tags (replaces the template's percentage bars)
+ * the template force-capitalizes every heading, which mangles real titles
+ * ("B.Sc. In ... And Engineering", "4-Bit ALU"). Render them as written.
  */
+
+.cv-title,
+.project-row-title,
+.skills-item-title,
+.service-item-title,
+.article-title { text-transform: none; }
+
+
+/**
+ * inline links in body copy (the template resets <a> to display:block)
+ */
+
+.about-text a,
+.cv-note a {
+  display: inline;
+  color: var(--orange-yellow-crayola);
+  text-decoration: none;
+  border-bottom: 1px solid hsla(45, 100%, 72%, 0.35);
+  transition: var(--transition-1);
+}
+
+.about-text a:hover,
+.cv-note a:hover { border-bottom-color: var(--orange-yellow-crayola); }
+
+
+/*-----------------------------------*\
+  #ACADEMIC CV LIST
+\*-----------------------------------*/
+
+.cv-list { counter-reset: cv; }
+
+.cv-item {
+  counter-increment: cv;
+  position: relative;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 4px 14px;
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid var(--jet);
+}
+
+.cv-item:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.cv-item::before {
+  content: counter(cv) ".";
+  grid-column: 1;
+  grid-row: 1;
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+  line-height: 1.4;
+  padding-top: 1px;
+}
+
+.cv-body {
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+}
+
+.cv-title {
+  color: var(--white-2);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.cv-org {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-400);
+  line-height: 1.5;
+}
+
+.cv-org a { display: inline; color: var(--orange-yellow-crayola); }
+
+.cv-meta {
+  color: var(--light-gray-70);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-300);
+  line-height: 1.5;
+  margin-top: 2px;
+}
+
+.cv-note {
+  color: var(--light-gray-70);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-300);
+  line-height: 1.7;
+  margin-top: 9px;
+  max-width: 700px;
+}
+
+/* the date column: stacked under the body on small screens */
+.cv-date {
+  grid-column: 2;
+  grid-row: 2;
+  color: var(--vegas-gold);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-400);
+  line-height: 1.5;
+  white-space: nowrap;
+  margin-top: 8px;
+}
+
+/* …and pulled out to the right on wide screens, like an academic CV */
+@media (min-width: 768px) {
+
+  .cv-item {
+    grid-template-columns: 30px 1fr auto;
+    column-gap: 18px;
+  }
+
+  .cv-body { grid-column: 2; }
+
+  .cv-date {
+    grid-column: 3;
+    grid-row: 1;
+    margin-top: 1px;
+    padding-top: 1px;
+    text-align: right;
+  }
+
+}
+
+
+/*-----------------------------------*\
+  #SKILL TAGS
+\*-----------------------------------*/
 
 .skills-item:not(:last-child) { margin-bottom: 20px; }
 
@@ -1905,6 +2043,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .tag {
+  position: relative;
+  z-index: 1;
   background: var(--border-gradient-onyx);
   color: var(--light-gray);
   font-size: var(--fs-8);
@@ -1912,7 +2052,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   padding: 5px 12px;
   border-radius: 8px;
   box-shadow: var(--shadow-2);
-  position: relative;
 }
 
 .tag::before {
@@ -1924,18 +2063,107 @@ textarea.form-input::-webkit-resizer { display: none; }
   z-index: -1;
 }
 
-/**
- * project descriptions
- */
 
-.project-text {
+/*-----------------------------------*\
+  #PROJECT LIST
+\*-----------------------------------*/
+
+/* a plain vertical list — NOT the template's .project-list grid */
+.project-rows {
+  display: block;
+  padding: 25px;
+}
+
+.project-row { display: none; }
+
+.project-row.active {
+  display: block;
+  animation: scaleUp 0.25s ease forwards;
+}
+
+.project-row {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--jet);
+}
+
+.project-row:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.project-row-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 16px;
+  margin-bottom: 12px;
+}
+
+.project-row-title {
+  color: var(--white-2);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+  line-height: 1.4;
+}
+
+.project-row-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  background: var(--border-gradient-onyx);
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-400);
+  padding: 7px 14px;
+  border-radius: 9px;
+  box-shadow: var(--shadow-2);
+  position: relative;
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.project-row-link::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--eerie-black-1);
+  border-radius: inherit;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.project-row-link:hover::before { background: var(--jet); }
+
+.project-row-link ion-icon { font-size: 15px; }
+
+.project-row .tag-list { margin-bottom: 11px; }
+
+.project-row-text {
   color: var(--light-gray-70);
   font-size: var(--fs-7);
   font-weight: var(--fw-300);
-  line-height: 1.6;
-  margin-top: 8px;
-  padding: 0 5px;
+  line-height: 1.7;
+  max-width: 760px;
 }
+
+/* a plain label for the hardware projects, which have no repo */
+.project-row-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-300);
+  padding: 7px 0;
+}
+
+.project-row-note ion-icon { font-size: 15px; }
+
 
 /**
  * let the desktop category filter wrap instead of overflowing
@@ -1947,34 +2175,3 @@ textarea.form-input::-webkit-resizer { display: none; }
     row-gap: 10px;
   }
 }
-
-/**
- * inline links in the about text
- */
-
-.about-text a {
-  display: inline;
-  color: var(--orange-yellow-crayola);
-  text-decoration: none;
-  border-bottom: 1px solid hsla(45, 100%, 72%, 0.35);
-  transition: var(--transition-1);
-}
-
-.about-text a:hover { border-bottom-color: var(--orange-yellow-crayola); }
-
-/**
- * timeline meta line (institution + dates)
- */
-
-.timeline-item > span { line-height: 1.6; }
-
-/**
- * the template force-capitalizes every heading, which mangles real titles
- * ("B.Sc. In ... And Engineering", "4-Bit ALU"). Render them as written.
- */
-
-.timeline-item-title,
-.project-title,
-.skills-item-title,
-.service-item-title,
-.article-title { text-transform: none; }

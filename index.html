@@ -23,8 +23,10 @@
 
   <!--
     - custom css link
+    - NOTE: the ?v=3 is a cache-buster. If you edit style.css and the change
+    - does not show up, bump it to ?v=4 and browsers will refetch the file.
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css?v=3">
 
   <!--
     - google font link
@@ -345,74 +347,21 @@
               <ion-icon name="briefcase-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Experience</h3>
+            <h3 class="h3">Work Experience</h3>
           </div>
 
-          <ol class="timeline-list">
+          <ol class="cv-list">
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Lecturer, Department of Computer Science and Engineering</h4>
-
-              <span>BRAC University, Dhaka &nbsp;•&nbsp; June 2025 — Present</span>
-
-              <p class="timeline-text">
-                Teaching in the Department of CSE at BRAC University.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">B.Sc. in Computer Science and Engineering</h4>
-
-              <span>Bangladesh University of Engineering and Technology &nbsp;•&nbsp; Feb 2020 — Mar 2025</span>
-
-              <p class="timeline-text">
-                GPA: 3.90 / 4.00
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">H.S.C in Science</h4>
-
-              <span>Notre Dame College, Dhaka &nbsp;•&nbsp; Jul 2017 — Jul 2019</span>
-
-              <p class="timeline-text">
-                GPA: 5.00 / 5.00
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">S.S.C in Science</h4>
-
-              <span>Bogura Zilla School, Bogura &nbsp;•&nbsp; Jan 2009 — Mar 2017</span>
-
-              <p class="timeline-text">
-                GPA: 5.00 / 5.00
-              </p>
-
+            <li class="cv-item">
+              <div class="cv-body">
+                <h4 class="cv-title">Lecturer</h4>
+                <p class="cv-org">
+                  Department of Computer Science and Engineering,
+                  <a href="https://cse.sds.bracu.ac.bd/" target="_blank" rel="noopener">BRAC University</a>
+                </p>
+                <p class="cv-meta">Dhaka, Bangladesh</p>
+              </div>
+              <div class="cv-date">June 2025 — Present</div>
             </li>
 
           </ol>
@@ -430,20 +379,69 @@
             <h3 class="h3">Thesis</h3>
           </div>
 
-          <ol class="timeline-list">
+          <ol class="cv-list">
 
-            <li class="timeline-item">
+            <li class="cv-item">
+              <div class="cv-body">
+                <h4 class="cv-title">New Results on Unique Neighbourhood Networks</h4>
+                <p class="cv-org">
+                  Undergraduate thesis,
+                  <a href="https://cse.buet.ac.bd" target="_blank" rel="noopener">Department of CSE, BUET</a>
+                </p>
+                <p class="cv-note">
+                  Unique Neighbourhood Networks are a special graph class in which no two vertices share the
+                  same neighbourhood. I derived a completely new formula to count the number of Unique
+                  Neighbourhood Networks (UNNs) on a given number of vertices, and used that formula to
+                  enumerate all of them.
+                </p>
+              </div>
+              <div class="cv-date">2025</div>
+            </li>
 
-              <h4 class="h4 timeline-item-title">New Results on Unique Neighbourhood Networks</h4>
+          </ol>
 
-              <span>Bangladesh University of Engineering and Technology</span>
+        </section>
 
-              <p class="timeline-text">
-                Unique Neighbourhood Networks are a special graph class in which no two vertices share the same
-                neighbourhood. I derived a completely new formula to count the number of Unique Neighbourhood
-                Networks (UNNs) on a given number of vertices, and used that formula to enumerate all of them.
-              </p>
 
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="cv-list">
+
+            <li class="cv-item">
+              <div class="cv-body">
+                <h4 class="cv-title">B.Sc. in Computer Science and Engineering</h4>
+                <p class="cv-org">
+                  <a href="https://www.buet.ac.bd" target="_blank" rel="noopener">Bangladesh University of Engineering and Technology</a>
+                </p>
+                <p class="cv-meta">Dhaka, Bangladesh &nbsp;·&nbsp; GPA: 3.90 / 4.00</p>
+              </div>
+              <div class="cv-date">Feb 2020 — Mar 2025</div>
+            </li>
+
+            <li class="cv-item">
+              <div class="cv-body">
+                <h4 class="cv-title">H.S.C in Science</h4>
+                <p class="cv-org">Notre Dame College</p>
+                <p class="cv-meta">Dhaka, Bangladesh &nbsp;·&nbsp; GPA: 5.00 / 5.00</p>
+              </div>
+              <div class="cv-date">Jul 2017 — Jul 2019</div>
+            </li>
+
+            <li class="cv-item">
+              <div class="cv-body">
+                <h4 class="cv-title">S.S.C in Science</h4>
+                <p class="cv-org">Bogura Zilla School</p>
+                <p class="cv-meta">Bogura, Bangladesh &nbsp;·&nbsp; GPA: 5.00 / 5.00</p>
+              </div>
+              <div class="cv-date">Jan 2009 — Mar 2017</div>
             </li>
 
           </ol>
@@ -453,7 +451,7 @@
 
         <section class="skill">
 
-          <h3 class="h3 skills-title">Skills</h3>
+          <h3 class="h3 skills-title">Technical Skills</h3>
 
           <ul class="skills-list content-card">
 
@@ -469,7 +467,7 @@
             </li>
 
             <li class="skills-item">
-              <h5 class="h5 skills-item-title">Web development</h5>
+              <h5 class="h5 skills-item-title">Web Development</h5>
               <ul class="tag-list">
                 <li class="tag">HTML</li>
                 <li class="tag">CSS</li>
@@ -590,190 +588,195 @@
 
           </div>
 
-          <ul class="project-list">
+          <ul class="project-rows content-card">
 
-            <li class="project-item  active" data-filter-item data-category="web">
-              <a href="https://github.com/Rifatzen/Conference-Management-System-Backend" target="_blank" rel="noopener">
+            <li class="project-row  active" data-filter-item data-category="web">
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="logo-github"></ion-icon>
-                  </div>
+              <div class="project-row-head">
+                <h3 class="project-row-title">Conference Management System</h3>
 
-                  <img src="./assets/images/project-conference.svg" alt="Conference Management System" loading="lazy">
-                </figure>
+                <a href="https://github.com/Rifatzen/Conference-Management-System-Backend" class="project-row-link" target="_blank" rel="noopener">
+                  <ion-icon name="logo-github"></ion-icon>
+                  <span>View on GitHub</span>
+                </a>
+              </div>
 
-                <h3 class="project-title">Conference Management System</h3>
+              <ul class="tag-list">
+                <li class="tag">Svelte</li>
+                <li class="tag">Node.js</li>
+                <li class="tag">Supabase</li>
+              </ul>
 
-                <p class="project-category">Svelte · Node.js · Supabase</p>
-
-              </a>
-
-              <p class="project-text">
-                A web application for running a conference: authors submit papers, organizers assign them to
-                reviewers, and reviewers submit their reviews anonymously.
+              <p class="project-row-text">
+                A web-based application to manage conferences where people can submit their papers. The
+                organizers can assign papers to reviewers, and the reviewers can submit their reviews
+                anonymously.
               </p>
+
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="machine learning">
-              <a href="https://github.com/Rifatzen/Neural-Network-from-Scratch" target="_blank" rel="noopener">
+            <li class="project-row  active" data-filter-item data-category="machine learning">
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="logo-github"></ion-icon>
-                  </div>
+              <div class="project-row-head">
+                <h3 class="project-row-title">Feedforward Neural Network from Scratch</h3>
 
-                  <img src="./assets/images/project-nn.svg" alt="Feedforward Neural Network from scratch" loading="lazy">
-                </figure>
+                <a href="https://github.com/Rifatzen/Neural-Network-from-Scratch" class="project-row-link" target="_blank" rel="noopener">
+                  <ion-icon name="logo-github"></ion-icon>
+                  <span>View on GitHub</span>
+                </a>
+              </div>
 
-                <h3 class="project-title">Feedforward Neural Network from Scratch</h3>
+              <ul class="tag-list">
+                <li class="tag">Python</li>
+                <li class="tag">NumPy</li>
+              </ul>
 
-                <p class="project-category">Python · NumPy</p>
-
-              </a>
-
-              <p class="project-text">
-                A feedforward neural network implemented from scratch in Python, with batch normalization,
-                gradient optimizers and dropout added to improve performance.
+              <p class="project-row-text">
+                Implemented a feedforward neural network from scratch using Python. I also implemented batch
+                normalization, gradient optimizers and dropout to enhance the performance.
               </p>
+
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="graphics">
-              <a href="https://github.com/Rifatzen/ray_tracing" target="_blank" rel="noopener">
+            <li class="project-row  active" data-filter-item data-category="graphics">
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="logo-github"></ion-icon>
-                  </div>
+              <div class="project-row-head">
+                <h3 class="project-row-title">Ray Tracing</h3>
 
-                  <img src="./assets/images/project-raytracing.svg" alt="Ray Tracing" loading="lazy">
-                </figure>
+                <a href="https://github.com/Rifatzen/ray_tracing" class="project-row-link" target="_blank" rel="noopener">
+                  <ion-icon name="logo-github"></ion-icon>
+                  <span>View on GitHub</span>
+                </a>
+              </div>
 
-                <h3 class="project-title">Ray Tracing</h3>
+              <ul class="tag-list">
+                <li class="tag">C++</li>
+                <li class="tag">OpenGL</li>
+              </ul>
 
-                <p class="project-category">C++ · OpenGL</p>
-
-              </a>
-
-              <p class="project-text">
-                A ray tracing engine that generates realistic images by simulating how light interacts with
-                objects, including reflection, refraction and shadows.
+              <p class="project-row-text">
+                Implemented a ray tracing engine to generate realistic images by simulating light interactions
+                with objects in C++. Developed features such as reflection, refraction and shadows to enhance
+                visual accuracy.
               </p>
+
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="systems">
-              <a href="https://github.com/Rifatzen/CSE310" target="_blank" rel="noopener">
+            <li class="project-row  active" data-filter-item data-category="systems">
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="logo-github"></ion-icon>
-                  </div>
+              <div class="project-row-head">
+                <h3 class="project-row-title">Basic C Compiler</h3>
 
-                  <img src="./assets/images/project-compiler.svg" alt="Basic C Compiler" loading="lazy">
-                </figure>
+                <a href="https://github.com/Rifatzen/CSE310" class="project-row-link" target="_blank" rel="noopener">
+                  <ion-icon name="logo-github"></ion-icon>
+                  <span>View on GitHub</span>
+                </a>
+              </div>
 
-                <h3 class="project-title">Basic C Compiler</h3>
+              <ul class="tag-list">
+                <li class="tag">C++</li>
+                <li class="tag">Flex</li>
+                <li class="tag">Bison</li>
+                <li class="tag">Assembly</li>
+              </ul>
 
-                <p class="project-category">C++ · Flex · Bison · Assembly</p>
-
-              </a>
-
-              <p class="project-text">
-                A C compiler built from scratch — symbol table, lexical analyzer, then syntax and semantic
-                analysis with Flex and Bison. It emits assembly, which runs on an emulator to check that the
-                compilation is correct.
+              <p class="project-row-text">
+                Developed a C compiler from scratch, beginning with the implementation of a symbol table.
+                Designed and implemented a lexical analyzer for tokenizing input, followed by syntax and
+                semantic analysis using Flex and Bison. Generated assembly code as the final output, which was
+                executed on an emulator to evaluate the correctness of the compilation process.
               </p>
+
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="graphics">
-              <a href="https://github.com/Rifatzen/pacman" target="_blank" rel="noopener">
+            <li class="project-row  active" data-filter-item data-category="graphics">
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="logo-github"></ion-icon>
-                  </div>
+              <div class="project-row-head">
+                <h3 class="project-row-title">Pacman</h3>
 
-                  <img src="./assets/images/project-pacman.svg" alt="Pacman" loading="lazy">
-                </figure>
+                <a href="https://github.com/Rifatzen/pacman" class="project-row-link" target="_blank" rel="noopener">
+                  <ion-icon name="logo-github"></ion-icon>
+                  <span>View on GitHub</span>
+                </a>
+              </div>
 
-                <h3 class="project-title">Pacman</h3>
+              <ul class="tag-list">
+                <li class="tag">C++</li>
+                <li class="tag">iGraphics</li>
+              </ul>
 
-                <p class="project-category">C++ · iGraphics</p>
-
-              </a>
-
-              <p class="project-text">
-                An interactive game in iGraphics where you collect coins without getting caught.
+              <p class="project-row-text">
+                An interactive game in iGraphics where you have to collect coins without getting caught.
               </p>
+
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="hardware">
-              <a href="#" onclick="return false;">
+            <li class="project-row  active" data-filter-item data-category="hardware">
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="hardware-chip-outline"></ion-icon>
-                  </div>
+              <div class="project-row-head">
+                <h3 class="project-row-title">4-bit ALU Design</h3>
 
-                  <img src="./assets/images/project-alu.svg" alt="4-bit ALU Design" loading="lazy">
-                </figure>
+                <span class="project-row-note">
+                  <ion-icon name="hardware-chip-outline"></ion-icon>
+                  <span>Hardware project</span>
+                </span>
+              </div>
 
-                <h3 class="project-title">4-bit ALU Design</h3>
+              <ul class="tag-list">
+                <li class="tag">Digital logic</li>
+              </ul>
 
-                <p class="project-category">Digital logic</p>
-
-              </a>
-
-              <p class="project-text">
-                An arithmetic logic unit built from only basic gates and adders, with the adders modified so
-                that the unit can carry out a range of instructions.
+              <p class="project-row-text">
+                An arithmetic logic unit was built using only basic gates and adders. The adders were modified
+                in such a fashion that it can perform various instructions.
               </p>
+
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="hardware">
-              <a href="#" onclick="return false;">
+            <li class="project-row  active" data-filter-item data-category="hardware">
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="hardware-chip-outline"></ion-icon>
-                  </div>
+              <div class="project-row-head">
+                <h3 class="project-row-title">4-bit MIPS Design</h3>
 
-                  <img src="./assets/images/project-mips.svg" alt="4-bit MIPS Design" loading="lazy">
-                </figure>
+                <span class="project-row-note">
+                  <ion-icon name="hardware-chip-outline"></ion-icon>
+                  <span>Hardware project</span>
+                </span>
+              </div>
 
-                <h3 class="project-title">4-bit MIPS Design</h3>
+              <ul class="tag-list">
+                <li class="tag">Logisim</li>
+                <li class="tag">Digital logic</li>
+              </ul>
 
-                <p class="project-category">Logisim · Digital logic</p>
-
-              </a>
-
-              <p class="project-text">
-                A software simulation of MIPS implemented in Logisim, followed by a hardware implementation
-                that carries out the instructions.
+              <p class="project-row-text">
+                A software simulation of MIPS was implemented in Logisim. The hardware implementation was also
+                done to carry out the instructions.
               </p>
+
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="hardware">
-              <a href="#" onclick="return false;">
+            <li class="project-row  active" data-filter-item data-category="hardware">
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="hardware-chip-outline"></ion-icon>
-                  </div>
+              <div class="project-row-head">
+                <h3 class="project-row-title">Trespassing Alarm System</h3>
 
-                  <img src="./assets/images/project-alarm.svg" alt="Trespassing Alarm System" loading="lazy">
-                </figure>
+                <span class="project-row-note">
+                  <ion-icon name="hardware-chip-outline"></ion-icon>
+                  <span>Hardware project</span>
+                </span>
+              </div>
 
-                <h3 class="project-title">Trespassing Alarm System</h3>
+              <ul class="tag-list">
+                <li class="tag">ESP32</li>
+                <li class="tag">Embedded</li>
+              </ul>
 
-                <p class="project-category">ESP32 · Embedded</p>
-
-              </a>
-
-              <p class="project-text">
-                An alarm system that detects trespassing in several ways, built around an ESP32
-                microcontroller.
+              <p class="project-row-text">
+                An alarm system that can detect trespassing in multiple ways. ESP32 was used as a
+                microcontroller to design the system.
               </p>
+
             </li>
 
           </ul>
@@ -800,48 +803,52 @@
 
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="school-outline"></ion-icon>
+              <ion-icon name="trophy-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Academic</h3>
+            <h3 class="h3">Competitions</h3>
           </div>
 
-          <ol class="timeline-list">
+          <ol class="cv-list">
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">University Merit Award</h4>
-
-              <span>March 2025</span>
-
-              <p class="timeline-text">
-                Perfect GPA in Level-4 Term-2.
-              </p>
-
+            <li class="cv-item">
+              <div class="cv-body">
+                <h4 class="cv-title">Undergraduate Math Olympiad</h4>
+                <p class="cv-org">8th place, Dhaka South region</p>
+              </div>
+              <div class="cv-date">2025</div>
             </li>
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">University Merit Award</h4>
-
-              <span>June 2024</span>
-
-              <p class="timeline-text">
-                Perfect GPA in Level-4 Term-1.
-              </p>
-
+            <li class="cv-item">
+              <div class="cv-body">
+                <h4 class="cv-title">Regional Math Olympiad</h4>
+                <p class="cv-org">Champion in 2016, 2017 and 2018 &nbsp;·&nbsp; First runner-up in 2019</p>
+              </div>
+              <div class="cv-date">2016 — 2019</div>
             </li>
 
-            <li class="timeline-item">
+            <li class="cv-item">
+              <div class="cv-body">
+                <h4 class="cv-title">National Math Olympiad</h4>
+                <p class="cv-org">Second runner-up</p>
+              </div>
+              <div class="cv-date">2019</div>
+            </li>
 
-              <h4 class="h4 timeline-item-title">Dean's List</h4>
+            <li class="cv-item">
+              <div class="cv-body">
+                <h4 class="cv-title">Regional Physics Olympiad</h4>
+                <p class="cv-org">Selected in 2016, 2018 and 2019</p>
+              </div>
+              <div class="cv-date">2016 — 2019</div>
+            </li>
 
-              <span>1st, 2nd and 4th year</span>
-
-              <p class="timeline-text">
-                Selected for the Dean's List in three of four undergraduate years.
-              </p>
-
+            <li class="cv-item">
+              <div class="cv-body">
+                <h4 class="cv-title">Creative Talent Hunt</h4>
+                <p class="cv-org">National level participant</p>
+              </div>
+              <div class="cv-date">2016</div>
             </li>
 
           </ol>
@@ -853,72 +860,36 @@
 
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="trophy-outline"></ion-icon>
+              <ion-icon name="ribbon-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Olympiads &amp; competitions</h3>
+            <h3 class="h3">Honors &amp; Awards</h3>
           </div>
 
-          <ol class="timeline-list">
+          <ol class="cv-list">
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Undergraduate Math Olympiad</h4>
-
-              <span>2025</span>
-
-              <p class="timeline-text">
-                8th place, Dhaka South region.
-              </p>
-
+            <li class="cv-item">
+              <div class="cv-body">
+                <h4 class="cv-title">University Merit Award</h4>
+                <p class="cv-org">Perfect GPA in Level-4 Term-2</p>
+              </div>
+              <div class="cv-date">Mar 2025</div>
             </li>
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Regional Math Olympiad</h4>
-
-              <span>2016, 2017, 2018, 2019</span>
-
-              <p class="timeline-text">
-                Champion in 2016, 2017 and 2018. First runner-up in 2019.
-              </p>
-
+            <li class="cv-item">
+              <div class="cv-body">
+                <h4 class="cv-title">University Merit Award</h4>
+                <p class="cv-org">Perfect GPA in Level-4 Term-1</p>
+              </div>
+              <div class="cv-date">Jun 2024</div>
             </li>
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">National Math Olympiad</h4>
-
-              <span>2019</span>
-
-              <p class="timeline-text">
-                Second runner-up.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Regional Physics Olympiad</h4>
-
-              <span>2016, 2018, 2019</span>
-
-              <p class="timeline-text">
-                Selected in three years.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Creative Talent Hunt</h4>
-
-              <span>2016</span>
-
-              <p class="timeline-text">
-                National level participant.
-              </p>
-
+            <li class="cv-item">
+              <div class="cv-body">
+                <h4 class="cv-title">Dean's List</h4>
+                <p class="cv-org">Selected in the Dean's List in 1st, 2nd and 4th year</p>
+              </div>
+              <div class="cv-date">2020 — 2025</div>
             </li>
 
           </ol>
@@ -990,8 +961,11 @@
 
   <!--
     - custom js link
+    - NOTE: the ?v=3 is a cache-buster. Browsers hold on to the old script.js
+    - very aggressively; changing this number forces them to refetch it.
+    - If you edit script.js and the change does not show up, bump it to ?v=4.
   -->
-  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script.js?v=3"></script>
 
   <!--
     - ionicon link
