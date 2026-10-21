@@ -663,3 +663,13 @@ a.contact-val:hover {
   .entry, .project { break-inside: avoid; }
 
 }
+
+/* blue links */
+main a,
+.sidebar a {
+  color: #0645ad;
+}
+main a:hover,
+.sidebar a:hover {
+  text-decoration: underline;
+}
