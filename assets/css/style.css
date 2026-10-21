@@ -673,3 +673,5 @@ main a:hover,
 .sidebar a:hover {
   text-decoration: underline;
 }
+
+.doc-link { color: #0645ad; }
